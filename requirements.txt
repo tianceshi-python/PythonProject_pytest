@@ -1,0 +1,28 @@
+# ============================================================
+# Python + Pytest + Requests + Allure API 接口自动化测试项目依赖清单
+# ============================================================
+
+# --- 核心测试框架 ---
+pytest>=7.4.0
+pytest-xdist>=3.3.0          # 并行执行测试用例
+pytest-rerunfailures>=13.0   # 失败用例重跑
+pytest-ordering>=0.6         # 控制用例执行顺序
+pytest-assume>=0.3.0         # 多断言（断言失败不中断）
+
+# --- HTTP 请求 ---
+requests>=2.31.0
+requests-toolbelt>=1.0.0     # 文件上传、multipart 等增强功能
+
+# --- Allure 报告 ---
+allure-pytest>=2.13.0
+
+# --- 数据处理 ---
+PyYAML>=6.0                  # YAML 配置文件读取
+jsonpath>=0.82               # JSON 路径提取
+
+# --- 日志 ---
+loguru>=0.7.0                # 简洁易用的日志库
+
+# --- 工具库 ---
+colorama>=0.4.6              # 终端彩色输出
+Faker>=19.0.0                # 测试数据生成

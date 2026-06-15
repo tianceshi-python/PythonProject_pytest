@@ -1,0 +1,42 @@
+# 正常场景
+normal:
+  - case: "case_01_normal"
+    case_params:
+      origin: '108.887221,34.214312'
+      destination: '108.914404,34.211750'
+    case_expect:
+      code: 200
+      status: "1"
+      info: "ok"
+      location: "116.301392,40.050897"
+
+
+# 异常场景
+error:
+  - case: "case_02_origin_empty"
+    case_params:
+      origin: ''
+      destination: '108.914404,34.211750'
+    case_expect:
+      code: 200
+      status: "0"
+      infocode: "20000"
+
+  - case: "case_03_destination_empty"
+    case_params:
+      origin: '108.887221,34.214312'
+      destination: ''
+    case_expect:
+      code: 200
+      status: "0"
+      infocode: "20000"
+
+  - case: "case_04_direction_over_100KM"
+    case_params:
+      origin: '108.887221,34.214312'
+      destination: '116.397755,39.903182'
+    case_expect:
+      code: 200
+      status: "0"
+      infocode: "10021"
+

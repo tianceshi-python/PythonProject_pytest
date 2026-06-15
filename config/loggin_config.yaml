@@ -1,0 +1,20 @@
+jwt:
+  #  现网巴人集团-“SDK拨测_误删”
+  appid:"200005528",
+  sdkid:"25580122128",
+  SecretID:"OqKPMVBfX8zl3Q9gopAVdzuQ9qsM4qxM",
+  SecretKey:"Wpkkh4QQxG30ueyxtdxIoie9guda1DxzIWYdxvsLM9Knk8WK"
+
+# 账号：13554635554
+userid: "wemeeting2519000"
+
+#高德地图key
+key: "0a261c360c9801fa222491cf1954d75e"
+
+retry:
+  retry_times: 3
+  retry_interval: 2
+  requests_timeout: 60
+  max_retries: 3
+  backoff_factor: 0.3
+  status_forcelist: [ 429, 500, 502, 503, 504 ]

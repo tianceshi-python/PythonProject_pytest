@@ -1,0 +1,42 @@
+# 正常场景
+normal:
+  - case: "case_01_normal"
+    case_params:
+      origin_address: '雁塔区丈八街道沣惠南路34号新长安广场2期C座'
+      destination_address: '雁塔区电子二路82号39所生活1区'
+    case_expect:
+      code: 200
+      status: "1"
+      info: "ok"
+      location: "116.301392,40.050897"
+
+
+# 异常场景
+error:
+  - case: "case_02_origin_empty"
+    case_params:
+      origin_address: ''
+      destination_address: '雁塔区电子二路82号39所生活1区'
+    case_expect:
+      code: 200
+      status: "0"
+      infocode: "20000"
+
+  - case: "case_03_destination_empty"
+    case_params:
+      origin_address: '雁塔区丈八街道沣惠南路34号新长安广场2期C座'
+      destination_address: ''
+    case_expect:
+      code: 200
+      status: "0"
+      infocode: "20000"
+
+  - case: "case_04_direction_over_100KM"
+    case_params:
+      origin_address: '雁塔区丈八街道沣惠南路34号新长安广场2期C座'
+      destination_address: '北京市东城区东长安街天安门广场'
+    case_expect:
+      code: 200
+      status: "0"
+      infocode: "10021"
+

@@ -1,0 +1,9 @@
+# 多环境域名
+host:
+  dev: "http://127.0.0.1:8080"
+  test: "https://test-api.example.com"
+  pre: "https://pre-api.example.com"
+  prd: "https://restapi.amap.com"
+
+
+

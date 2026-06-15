@@ -1,0 +1,61 @@
+description: 创建会议
+method: POST
+url: "/v1/meetings"
+headers:
+  Content-Type: application/json,
+  "X-TC-Registered": "1"
+body:
+  userid: "wemeeting8057546",
+  instanceid: 2,
+  subject: "api_test1",
+  type: 0,
+  hosts: [],
+  guests: [ ],
+  invitees: [],
+  start_time: "int",
+  end_time: "int",
+  password: "string",
+  settings:
+    mute_enable_type_join: "string",
+    mute_enable_join: "string",
+    allow_unmute_self: "string",
+    play_ivr_on_leave: "string",
+    play_ivr_on_join: "string",
+    allow_in_before_host: "string",
+    auto_in_waiting_room: "string",
+    allow_screen_shared_watermark: "string",
+    water_mark_type: "string",
+    only_enterprise_user_allowed: "string",
+    auto_record_type: "string",
+    participant_join_auto_record: "string",
+    enable_host_pause_auto_record: "string",
+    allow_multi_device: "string"
+  meeting_type: "integer",
+  recurring_rule:
+    recurring_type: "string",
+    until_type: "string",
+    until_date: "string",
+    until_count: "string",
+    customized_recurring_type: "string",
+    customized_recurring_step: "string",
+    customized_recurring_days: "string"
+  enable_live: "boolean",
+  live_config:
+    live_subject: "string",
+    live_password: "string",
+    live_summary: "string",
+    enable_live_password: "string",
+    enable_live_im: "string",
+    enable_live_replay: "string",
+    live_watermark:
+      watermark_opt: "string"
+  enable_doc_upload_permission: "boolean",
+  media_set_type: "integer",
+  enable_interpreter: "boolean",
+  enable_enroll: "boolean",
+  enable_host_key: "boolean",
+  host_key: "string",
+  sync_to_wework: "boolean",
+  time_zone: "string",
+  location: "string",
+  allow_enterprise_intranet_only: "boolean"

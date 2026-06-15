@@ -1,0 +1,11 @@
+description: 高德地理编码
+method: GET
+url: "/v3/geocode/geo"
+headers:
+  Content-Type: application/json
+parameters:
+  key: ""
+  address: ""
+  city: ""
+  output: ""
+  callback: ""

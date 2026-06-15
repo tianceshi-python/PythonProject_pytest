@@ -1,0 +1,14 @@
+description: 步行路径规划
+method: GET
+url: "/v3/direction/walking"
+headers:
+  Content-Type: application/json
+parameters:
+  key: ""
+  origin: ""
+  destination: ""
+  origin_id: ""
+  destination_id: ""
+  sig: ""
+  output: ""
+  callback: ""

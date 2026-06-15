@@ -1,0 +1,16 @@
+description: 高德逆地理编码
+method: GET
+url: "/v3/geocode/regeo"
+headers:
+  Content-Type: application/json
+parameters:
+  key: ""
+  location: ""
+  poitype: ""
+  radius: ""
+  extensions: ""
+  roadlevel: ""
+  sig: ""
+  batch: ""
+  callback: ""
+  homeorcorp: ""

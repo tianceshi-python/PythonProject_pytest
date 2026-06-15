@@ -1,0 +1,29 @@
+# 正常场景
+normal:
+  - case: "正常坐标解析"
+    case_params:
+      location: '108.887221,34.214312'
+    case_expect:
+      code: 200
+      status: "1"
+      info: "ok"
+      formatted_address: '陕西省西安市雁塔区丈八街道瑞幸咖啡(新长安广场店)新长安广场C座'
+
+# 异常场景
+error:
+  - case: "空坐标解析"
+    case_params:
+      location: ""
+    case_expect:
+      code: 200
+      status: "1"
+      formatted_address: []
+
+  - case: "错误坐标解析"
+    case_params:
+      location: "花,花"
+    case_expect:
+      code: 200
+      status: "1"
+      formatted_address: []
+
