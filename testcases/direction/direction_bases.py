@@ -2,11 +2,12 @@ from common.requests_client import RequestsClient
 from common.file_reader import read_yaml
 from common.logger import logger
 from common.assert_tools import AssertTools
+from common.base_case import BaseCaseTags
 
 KEY = read_yaml("config/base_config.yaml")["key"]
 
 
-class DirectionBases(RequestsClient):
+class DirectionBases(RequestsClient,BaseCaseTags):
     def direction_walking(self, origin, destination, origin_id=None, destination_id=None, callback=None, sig=None,
                           output=None):
         """地理编码"""

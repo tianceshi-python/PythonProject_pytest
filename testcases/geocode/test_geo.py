@@ -11,7 +11,7 @@ error_case = cases_data["error"]
 
 class TestGeoSuccess(GeocodeBases):
     case_owner = "tianxueyan"
-    tag = "geocode"
+    tag = ["geocode","p2","smoke"]
     timeout = 90
 
     @pytest.mark.parametrize("item", normal_case, ids=[x["case"] for x in normal_case])
@@ -26,7 +26,7 @@ class TestGeoSuccess(GeocodeBases):
 
 class TestGeoFail(GeocodeBases, AssertTools):
     case_owner = "tianxueyan"
-    tag = "geocode"
+    tag = ["geocode","p2"]
     timeout = 90
 
     @pytest.mark.parametrize("item", error_case, ids=[x["case"] for x in error_case])
