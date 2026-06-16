@@ -11,7 +11,7 @@ error_case = cases_data["error"]
 
 class TestWalkingSuccess(DirectionBases):
     case_owner = "tianxueyan"
-    tag = ["direction","p1"]
+    tags = ["direction","p1"]
     timeout = 90
 
     @pytest.mark.parametrize("item", normal_case, ids=[x["case"] for x in normal_case])
@@ -35,7 +35,7 @@ class TestWalkingSuccess(DirectionBases):
 
 class TestWalkingUnnormal(DirectionBases):
     case_owner = "tianxueyan"
-    tag = ["direction","p2"]
+    tags = ["direction","p2"]
     timeout = 90
 
     @pytest.mark.parametrize("item", error_case, ids=[x["case"] for x in error_case])

@@ -52,9 +52,11 @@ class BaseCaseTags:
         super().__init_subclass__(**kwargs)
         # 取出当前子类定义的tags列表
         tag_list = getattr(cls, "tags", [])
+        owner = cls.case_owner.strip() if hasattr(cls, "case_owner") else ""
         # 无标签直接跳过
         if not tag_list:
             return
+
 
         # 校验：所有标签必须来自预定义常量，禁止手写自定义字符串
         for tag in tag_list:
@@ -66,6 +68,12 @@ class BaseCaseTags:
             func = getattr(cls, attr_name)
             if attr_name.startswith("test_") and callable(func):
                 wrap_func = func
+
+                # ========== 自动注入 Allure 负责人 ==========
+                # if owner:
+                #     wrap_func = allure.owner(owner)(wrap_func)
+
+                # ========== 自动注入 pytest 标签 + Allure 分类/优先级 ==========
                 for tag in tag_list:
                     # pytest 用例打标签
                     wrap_func = getattr(pytest.mark, tag)(wrap_func)

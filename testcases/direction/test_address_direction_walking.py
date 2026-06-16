@@ -14,7 +14,7 @@ context = TestContext()
 
 class TestAddressWalkingSuccess(DirectionBases, GeocodeBases):
     case_owner = "tianxueyan"
-    tag = ["direction","p0","smoke"]
+    tags = ["direction","p0","smoke"]
     timeout = 90
 
     @pytest.mark.parametrize("item", normal_case, ids=[x["case"] for x in normal_case])
@@ -59,7 +59,7 @@ class TestAddressWalkingSuccess(DirectionBases, GeocodeBases):
 
 class TestAddressWalkingUnnormal(DirectionBases, GeocodeBases):
     case_owner = "tianxueyan"
-    tag = ["direction","p2"]
+    tags = ["direction","p2"]
     timeout = 90
 
     @pytest.mark.parametrize("item", error_case, ids=[x["case"] for x in error_case])

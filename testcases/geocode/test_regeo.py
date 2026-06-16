@@ -12,7 +12,7 @@ error_case = cases_data["error"]
 
 class TestRegeoSuccess(GeocodeBases):
     case_owner = "tianxueyan"
-    tag = ["geocode","p1"]
+    tags = ["geocode","p1"]
     timeout = 90
 
     @pytest.mark.parametrize("item", normal_case, ids=[x["case"] for x in normal_case])
@@ -31,7 +31,7 @@ class TestRegeoSuccess(GeocodeBases):
 
 class TestRegeoFail(GeocodeBases):
     case_owner = "tianxueyan"
-    tag = ["geocode","p2"]
+    tags = ["geocode","p2"]
     timeout = 90
 
     @pytest.mark.parametrize("item", error_case, ids=[x["case"] for x in error_case])
