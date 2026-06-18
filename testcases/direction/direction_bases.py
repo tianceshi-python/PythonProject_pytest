@@ -11,7 +11,7 @@ class DirectionBases(RequestsClient,BaseCaseTags):
     def direction_walking(self, origin, destination, origin_id=None, destination_id=None, callback=None, sig=None,
                           output=None):
         """地理编码"""
-        api_data = read_yaml("data/v3/direction_walking.yaml")
+        api_data = read_yaml("api/v3/direction_walking.yaml")
         api_path = api_data["url"]
         param = {
             'key': KEY,
@@ -35,7 +35,7 @@ class DirectionBases(RequestsClient,BaseCaseTags):
                           batch=None,
                           callback=None, homeorcorp=None):
         """逆地理编码"""
-        api_data = read_yaml("data/v3/regeo.yaml")
+        api_data = read_yaml("api/v3/regeo.yaml")
         api_path = api_data["url"]
         print(api_path)
         param = {

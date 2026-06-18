@@ -10,7 +10,7 @@ KEY = read_yaml("config/base_config.yaml")["key"]
 class GeocodeBases(RequestsClient, BaseCaseTags):
     def geocode_geo(self, address, city=None, sig=None, output=None):
         """地理编码"""
-        api_data = read_yaml("data/v3/geocode.yaml")
+        api_data = read_yaml("api/v3/geocode.yaml")
         api_path = api_data["url"]
         param = {
             'key': KEY,
@@ -30,7 +30,7 @@ class GeocodeBases(RequestsClient, BaseCaseTags):
     def geocode_regeo(self, location, poitype=None, radius=None, extensions=None, roadlevel=None, sig=None, batch=None,
                       callback=None, homeorcorp=None):
         """逆地理编码"""
-        api_data = read_yaml("data/v3/regeo.yaml")
+        api_data = read_yaml("api/v3/regeo.yaml")
         api_path = api_data["url"]
         print(api_path)
         param = {
